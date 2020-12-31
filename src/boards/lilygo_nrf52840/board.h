@@ -33,7 +33,7 @@
 #define LEDS_NUMBER           2
 #define LED_PRIMARY_PIN       _PINNUM(0, 13)
 #define LED_SECONDARY_PIN     _PINNUM(0, 14)
-#define LED_STATE_ON          1
+#define LED_STATE_ON          0
 
 /*------------------------------------------------------------------*/
 /* BUTTON
