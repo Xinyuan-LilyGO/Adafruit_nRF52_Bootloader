@@ -201,6 +201,9 @@ int main(void)
     led_state(STATE_WRITING_FINISHED);
   }
 
+  /* give certain time for RESET button capacitor to charge up */
+  NRFX_DELAY_MS(200);
+
   /*------------- Determine DFU mode (Serial, OTA, FRESET or normal) -------------*/
   // DFU button pressed
   dfu_start  = dfu_start || (button_pressed(BUTTON_DFU) && !dfu_skip);
