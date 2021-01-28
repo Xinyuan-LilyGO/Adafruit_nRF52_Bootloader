@@ -22,8 +22,8 @@
  * THE SOFTWARE.
  */
 
-#ifndef _FEATHER_NRF52840_H
-#define _FEATHER_NRF52840_H
+#ifndef _LILYGO_NRF52840_H
+#define _LILYGO_NRF52840_H
 
 #define _PINNUM(port, pin)    ((port)*32 + (pin))
 
@@ -68,4 +68,4 @@
 #define UF2_INDEX_URL         "http://www.lilygo.cn/"
 // #define UF2_VOLUME_LABEL      "FTHR840BOOT"
 
-#endif // _FEATHER_NRF52840_H
+#endif // _LILYGO_NRF52840_H
