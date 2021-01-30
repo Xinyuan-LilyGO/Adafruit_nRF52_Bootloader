@@ -22,10 +22,16 @@
  * THE SOFTWARE.
  */
 
-#ifndef _FEATHER_NRF52840_H
-#define _FEATHER_NRF52840_H
+#ifndef _LILYGO_NRF52840_H
+#define _LILYGO_NRF52840_H
 
 #define _PINNUM(port, pin)    ((port)*32 + (pin))
+
+// When board is supplied on VDDH (and not VDD), this specifies what voltage the GPIO should run at
+// and what voltage is output at VDD. The default (0xffffffff) is 1.8V; typically you'll want
+//     #define UICR_REGOUT0_VALUE UICR_REGOUT0_VOUT_3V3
+// in board.h when using that power configuration.
+#define UICR_REGOUT0_VALUE    UICR_REGOUT0_VOUT_3V3
 
 /*------------------------------------------------------------------*/
 /* LED
@@ -62,4 +68,4 @@
 #define UF2_INDEX_URL         "http://www.lilygo.cn/"
 // #define UF2_VOLUME_LABEL      "FTHR840BOOT"
 
-#endif // _FEATHER_NRF52840_H
+#endif // _LILYGO_NRF52840_H
