@@ -45,8 +45,8 @@
 /* BUTTON
  *------------------------------------------------------------------*/
 #define BUTTONS_NUMBER        2
-#define BUTTON_DFU            _PINNUM(1, 10)
-#define BUTTON_FRESET         _PINNUM(0, 18)
+#define BUTTON_DFU            _PINNUM(1, 10)    /* USB UF2 and CDC */
+#define BUTTON_FRESET         _PINNUM(0, 11)    /* BLE OTA         */
 #define BUTTON_PULL           NRF_GPIO_PIN_PULLUP
 
 //--------------------------------------------------------------------+
