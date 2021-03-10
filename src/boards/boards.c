@@ -82,10 +82,10 @@ void board_init(void)
   neopixel_init();
 #endif
 
-#if ENABLE_DCDC_0 == 1
+#if defined(ENABLE_DCDC_0) && ENABLE_DCDC_0 == 1
   NRF_POWER->DCDCEN0 = 1;
 #endif
-#if ENABLE_DCDC_1 == 1
+#if defined(ENABLE_DCDC_1) && ENABLE_DCDC_1 == 1
   NRF_POWER->DCDCEN = 1;
 #endif
 
