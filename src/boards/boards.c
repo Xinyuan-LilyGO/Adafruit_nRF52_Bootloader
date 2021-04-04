@@ -67,6 +67,15 @@ void board_init(void)
   NRF_CLOCK->LFCLKSRC = CLOCK_LFCLKSRC_SRC_RC;
   NRF_CLOCK->TASKS_LFCLKSTART = 1UL;
 
+#if defined(LED_PWR_EN)
+  nrf_gpio_cfg_default(LED_PWR_EN);
+#endif /* LED_PWR_EN */
+
+#if defined(LED_PWR_ON)
+  nrf_gpio_cfg_output(LED_PWR_ON);
+  nrf_gpio_pin_write(LED_PWR_ON, 1);
+#endif /* LED_PWR_ON */
+
   button_init(BUTTON_DFU);
   button_init(BUTTON_FRESET);
   NRFX_DELAY_US(100); // wait for the pin state is stable
