@@ -22,8 +22,8 @@
  * THE SOFTWARE.
  */
 
-#ifndef _LILYGO_NRF52840_H
-#define _LILYGO_NRF52840_H
+#ifndef _LILYGO_TECHO_H
+#define _LILYGO_TECHO_H
 
 #define _PINNUM(port, pin)    ((port)*32 + (pin))
 
@@ -56,8 +56,8 @@
 //--------------------------------------------------------------------+
 // BLE OTA
 //--------------------------------------------------------------------+
-#define BLEDIS_MANUFACTURER   "LilyGo nRF52840 ePaper"
-#define BLEDIS_MODEL          "LilyGo-nRF52840-ePaper-v1"
+#define BLEDIS_MANUFACTURER   "LilyGo"
+#define BLEDIS_MODEL          "T-Echo v2"
 
 //--------------------------------------------------------------------+
 // USB
@@ -67,9 +67,9 @@
 #define USB_DESC_CDC_ONLY_PID  0x002A
 
 //------------- UF2 -------------//
-#define UF2_PRODUCT_NAME      "LilyGo nRF52840 ePaper"
-#define UF2_BOARD_ID          "LilyGo nRF52840 ePaper"
+#define UF2_PRODUCT_NAME      "LilyGo T-Echo"
+#define UF2_BOARD_ID          "nRF52840-TEcho-v2"
 #define UF2_INDEX_URL         "http://www.lilygo.cn/"
 // #define UF2_VOLUME_LABEL      "FTHR840BOOT"
 
-#endif // _LILYGO_NRF52840_H
+#endif // _LILYGO_TECHO_H
