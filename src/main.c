@@ -202,14 +202,20 @@ int main(void)
   }
 
   /* give certain time for RESET button capacitor to charge up */
-  NRFX_DELAY_MS(200);
+  NRFX_DELAY_MS(100);
 
   /*------------- Determine DFU mode (Serial, OTA, FRESET or normal) -------------*/
   // DFU button pressed
   dfu_start  = dfu_start || (button_pressed(BUTTON_DFU) && !dfu_skip);
 
   // DFU + FRESET are pressed --> OTA
-  _ota_dfu = _ota_dfu  || ( button_pressed(BUTTON_DFU) && button_pressed(BUTTON_FRESET) ) ;
+  bool _freset = button_pressed(BUTTON_FRESET);
+
+#if defined(_LILYGO_TECHO_H)
+  _freset = !(_freset);
+#endif
+
+  _ota_dfu = _ota_dfu  || ( button_pressed(BUTTON_DFU) && _freset ) ;
 
   bool const valid_app = bootloader_app_is_valid();
   bool const just_start_app = valid_app && !dfu_start && (*dbl_reset_mem) == DFU_DBL_RESET_APP;

@@ -37,13 +37,13 @@
 /* LED
  *------------------------------------------------------------------*/
 #define LEDS_NUMBER           2
-//#define LED_PRIMARY_PIN       _PINNUM(0, 13)  /* REV-2020-12-12: RED     */
-#define LED_PRIMARY_PIN       _PINNUM(1, 3)   /* REV-2021-03-16: GREEN ? */
-#define LED_SECONDARY_PIN     _PINNUM(0, 14)  /* REV-2020-12-12: BLUE    */
+//#define LED_PRIMARY_PIN       _PINNUM(0, 13)  /* REV-2020-12-12: RED  */
+#define LED_PRIMARY_PIN       _PINNUM(1, 3)   /* REV-2021-03-16: RED  */
+#define LED_SECONDARY_PIN     _PINNUM(0, 14)  /* REV-2020-12-12: BLUE */
 #define LED_STATE_ON          0
 
 #define LED_PWR_ON            _PINNUM(0, 12)
-#define LED_PWR_EN            _PINNUM(0, 13)   /* REV-2021-03-16         */
+#define LED_PWR_EN            _PINNUM(0, 13)  /* REV-2021-03-16       */
 
 /*------------------------------------------------------------------*/
 /* BUTTON
@@ -57,7 +57,7 @@
 // BLE OTA
 //--------------------------------------------------------------------+
 #define BLEDIS_MANUFACTURER   "LilyGo"
-#define BLEDIS_MODEL          "T-Echo v2"
+#define BLEDIS_MODEL          "T-Echo v1"
 
 //--------------------------------------------------------------------+
 // USB
@@ -68,7 +68,7 @@
 
 //------------- UF2 -------------//
 #define UF2_PRODUCT_NAME      "LilyGo T-Echo"
-#define UF2_BOARD_ID          "nRF52840-TEcho-v2"
+#define UF2_BOARD_ID          "nRF52840-TEcho-v1"
 #define UF2_INDEX_URL         "http://www.lilygo.cn/"
 // #define UF2_VOLUME_LABEL      "FTHR840BOOT"
 
